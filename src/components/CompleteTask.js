@@ -15,7 +15,6 @@ const updateTodo = /* GraphQL */ `
 function CompleteTask({ completed, id, name, markAsCompleted }) {
   const [, markAsCompletedTask] = useMutation(updateTodo);
   async function taskCompleted(taskId) {
-    console.clear();
     try {
       const mark = {
         id,

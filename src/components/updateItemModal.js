@@ -28,7 +28,7 @@ function UpdateItemModal(props) {
   const [, updateTodoItem] = useMutation(updateTodo);
   async function onSubmit(e) {
     e.preventDefault();
-    console.clear('hello world');
+     
     try {
       const newItem = {
         id: props.id,

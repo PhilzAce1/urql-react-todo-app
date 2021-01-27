@@ -38,7 +38,6 @@ function ItemModal(props) {
   };
 
   const onSubmit = async (e) => {
-    // console.clear();
     const newItem = {
       data: {
         name: name,
@@ -92,6 +91,7 @@ function ItemModal(props) {
 
 const mapStateToProps = (state) => ({
   item: state.item,
+  state: state,
 });
 
 export default connect(mapStateToProps, { addItem })(ItemModal);

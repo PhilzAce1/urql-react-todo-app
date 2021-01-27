@@ -16,15 +16,6 @@ function DeleteButton({ id, deleteItem }) {
   const [, deleteTask] = useMutation(deleteTodo);
   async function onDeleteClick(id) {
     try {
-      // const data = await API.graphql(
-      //   graphqlOperation(deleteTodo, { input: { id } })
-      // );
-      // console.log(data);
-      // const {
-      //   data: {
-      //     deleteTodo: { id: deletedDataId },
-      //   },
-      // } = data;
       const data = { id };
       deleteTask(data).then((result) => {
         const {

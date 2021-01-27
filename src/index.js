@@ -3,13 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { createClient, Provider } from 'urql';
-// import { client } from './client';
 
+// Create a Urql graphql client
 const client = createClient({
-  url: 'https://graphql.fauna.com/graphql',
+  url: 'https://graphql.fauna.com/graphql', /// the graqhql api url
   fetchOptions: {
+    // fetch you which to add
     headers: {
-      authorization: `Bearer ${process.env.REACT_APP_FAUNA_SECRET}`,
+      // request header
+      authorization: `Bearer ${process.env.REACT_APP_FAUNA_SECRET}`, // authorization token imported from .env.local
     },
   },
 });
